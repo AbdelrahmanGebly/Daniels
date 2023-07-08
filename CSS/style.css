@@ -1,0 +1,311 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-padding-top: 60px;
+}  
+:root{
+    --secondary-bacground-color:#F7F7F7;
+    --main-text-color:#343434;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+span,a{
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.heading p::after{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: var(--secondary-bacground-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+::selection{
+    color: #fff;
+    background-color: #242424;
+}
+.fit-content{
+    width: fit-content;
+}
+.main-text-color{
+    color: var(--main-text-color) !important;
+}
+.bg-secondar{
+    background-color: var(--secondary-bacground-color);
+}
+.secondary-text-color{
+    color: rgb(153, 153, 153);
+}
+.third-text-color{
+    color: rgb(116, 129, 130);
+}
+/* ___________________________________________________________________________________________ */
+.navbar a.navbar-brand {
+    letter-spacing: 1px;
+}
+.nav-link{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+/* ?=========> Start Home Section */
+.home{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+.home h1{
+    font-weight: 100 !important;
+}
+.home ul li a{
+    width: 40px;
+    height: 40px;
+}
+/* ?=========> End Home Section */
+
+/* ?=========> Start About Section */
+.about,.services, .portfolio, .blog{
+    background-color: var(--main-backgoround-color);
+    padding-top: var(--main-padding);
+}
+.about span{
+    color: #4e4e4e;
+    margin-bottom: 5px;
+}
+.progress-bar{
+    background-color: #1C1C1C;
+}
+.progress-bar h6{
+    font-size: 13px;
+}
+/* ?=========> End About Section */
+
+/* ?=========> Start Services Section */
+.services{
+    background-color: var(--secondary-bacground-color);
+}
+.services .row .card,.portfolio .row .card{
+    width: calc((100% - 40px)/3);
+    transition: .5s;
+}
+.services .row .card i{
+    transition: .5s;
+    background-color: var(--secondary-bacground-color);
+    width:80px;height:80px;border:10px solid var(--secondary-background-color)
+}
+.services .row .card:hover i ,.overlay .icons i{
+    background-color:var(--main-text-color);
+    color: #fff;
+}
+.overlay .icons i{
+    transition: color .5s, background-color .5s;
+}
+.overlay .icons i:hover{
+    background-color:#fff;
+    color: var(--main-text-color);
+    border: 1px solid var(--main-text-color);
+}
+.services .card p{
+    color: rgb(116, 129, 130);
+    font-size: 14px;
+}
+/* ?=========> End Services Section */
+
+/* ?=========> Start Portfolio Section */
+.portfolio ul li button{
+    color: rgb(34, 34, 34);
+    font-size: 16px;
+    position: relative;
+}
+.nav-link:focus, .nav-link:hover{
+    color:rgb(34, 34, 34);
+}
+.nav-link.active::after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background-color: rgb(34, 34, 34);;
+}
+/* feedback */
+.carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #1C1C1C   ;
+}
+/* ?=========> End Portfolio Section */
+
+.feedback .row p{
+    font-weight:500;
+    font-size: 15px;
+}
+.row {
+    --bs-gutter-x: 0;
+}
+
+.portfolio .overlay{
+    height: calc(100% - 5px);
+    width: calc(100% - 30px);
+    top: 3px;
+    left: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: opacity .5s;
+}
+.portfolio .overlay-info{
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.portfolio .overlay-info h4{
+    top:-10px;
+    transition: top .5s;
+}
+.portfolio .overlay-info .icons{
+    justify-content: center !important;
+    gap:0;
+    top:10px;
+    transition: top .5s;
+}
+.portfolio .overlay:hover{
+    opacity: 1;
+}
+.portfolio .overlay:hover h4,.overlay:hover .icons{
+    top:0px;
+}
+
+/* ?Start Team section */
+.team .overlay{
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: rotateY(90deg);
+    transition: transform .5s;
+}
+.team .image:hover .overlay{
+    transform: rotateY(0deg);
+}
+.team .card-content .image img{
+    transition: .5s;
+}
+.team .card-content .image:hover img{
+    transform: scale(1.2);
+}
+.overlay-info{
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.team .text-content h4{
+    font-size: 25px;
+    font-weight: 500;
+}
+.team .text-content h5{
+    font-size: 20px;
+}
+/* ?End Team section */
+
+/* ?Start Contact Us section */
+.contact .row .information i{
+    transition: .5s;
+    background-color: var(--secondary-bacground-color);
+    width:60px;height:60px;border:10px solid var(--secondary-background-color)
+}
+.contact .row .information:hover i ,.overlay .icons i{
+    background-color:var(--main-text-color);
+    color: #fff;
+}
+.contact .row input{
+    width: 49%;
+}
+body:has(#home:target) .navbar-nav .nav-item:first-child::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#about:target) .navbar-nav .nav-item:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#services:target) .navbar-nav .nav-item:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#work:target) .navbar-nav .nav-item:nth-child(4)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#clients:target) .navbar-nav .nav-item:nth-child(5)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#team:target) .navbar-nav .nav-item:nth-child(6)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+body:has(#contact:target) .navbar-nav .nav-item:nth-child(7)::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 10px;
+    left:9%;
+    background-color: rgb(13, 202, 240);
+}
+
+/* ?End Contact Us section */
